@@ -1,96 +1,251 @@
+/* ================================
+   WINDOWS SHORTCUTS A-Z
+   PREMIUM DARK DESIGN
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
+    background:
+        radial-gradient(circle at top left, #312e81 0%, transparent 35%),
+        radial-gradient(circle at top right, #0e7490 0%, transparent 30%),
+        linear-gradient(135deg, #020617, #111827, #1e1b4b);
     color: white;
-    text-align: center;
+    min-height: 100vh;
 }
+
+
+/* ================================
+   HEADER
+================================ */
 
 header {
-    padding: 80px 20px;
+    padding: 70px 25px 100px;
 }
 
 h1 {
+    margin: 0 0 15px;
     font-size: 55px;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 22px;
-    color: #cbd5e1;
-}
-.shortcut-card {
-    width: 350px;
-    margin: 30px auto;
-    padding: 25px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.letter {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #ff0080, #7928ca);
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.shortcut-info {
-    text-align: left;
-}
-
-.shortcut-info h2 {
-    margin: 0;
-    font-size: 25px;
-}
-
-.shortcut-info p {
-    margin: 8px 0 0;
-    font-size: 17px;
-}
-.shortcut-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.shortcut-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(255, 0, 128, 0.35);
-}
-.letter {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-}
-
-.shortcut-card:nth-child(3n + 2) .letter {
-    background: linear-gradient(135deg, #ff0080, #7928ca);
-}
-
-.shortcut-card:nth-child(3n) .letter {
-    background: linear-gradient(135deg, #00f2fe, #4facfe);
-}
-.shortcut-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 20px 50px rgba(0, 200, 255, 0.35);
-    border-color: rgba(255, 255, 255, 0.4);
-}
-h1 {
+    font-weight: 800;
     background: linear-gradient(90deg, #00c6ff, #ff00cc, #ffd000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 25px rgba(0, 200, 255, 0.25);
 }
+
+header > p {
+    margin: 0;
+    font-size: 21px;
+    color: #cbd5e1;
+}
+
+
+/* ================================
+   SHORTCUT GRID
+================================ */
+
+.shortcut-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1150px;
+    margin: 60px auto 0;
+    padding: 0 10px;
+}
+
+
+/* ================================
+   CATEGORY TITLES
+================================ */
+
 .category-title {
     grid-column: 1 / -1;
-    font-size: 32px;
-    margin: 30px 0 10px;
-    color: #ffffff;
+    margin: 55px 0 5px;
+    padding: 15px 20px;
     text-align: left;
+    font-size: 30px;
+    font-weight: 800;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 198, 255, 0.18),
+        rgba(255, 0, 204, 0.12),
+        transparent
+    );
+
+    border-left: 5px solid #00c6ff;
+    border-radius: 12px;
+
+    color: #ffffff;
+}
+
+
+/* ================================
+   SHORTCUT CARDS
+================================ */
+
+.shortcut-card {
+    width: 100%;
+    min-height: 125px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ================================
+   CARD HOVER
+================================ */
+
+.shortcut-card:hover {
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow:
+        0 20px 45px rgba(0, 200, 255, 0.25),
+        0 0 25px rgba(255, 0, 204, 0.12);
+
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* ================================
+   LETTER BOX
+================================ */
+
+.letter {
+    min-width: 65px;
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background: linear-gradient(
+        135deg,
+        #00c6ff,
+        #0072ff
+    );
+
+    font-size: 25px;
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 20px rgba(0, 114, 255, 0.3);
+
+    flex-shrink: 0;
+}
+
+
+/* Different colors for cards */
+
+.shortcut-card:nth-child(3n + 2) .letter {
+    background: linear-gradient(
+        135deg,
+        #ff0080,
+        #7928ca
+    );
+}
+
+.shortcut-card:nth-child(3n) .letter {
+    background: linear-gradient(
+        135deg,
+        #00f2fe,
+        #4facfe
+    );
+}
+
+
+/* ================================
+   CARD TEXT
+================================ */
+
+.shortcut-info {
+    text-align: left;
+    min-width: 0;
+}
+
+.shortcut-info h2 {
+    margin: 0;
+    font-size: 21px;
+    color: #ffffff;
+}
+
+.shortcut-info p {
+    margin: 8px 0 0;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #cbd5e1;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 900px) {
+
+    h1 {
+        font-size: 43px;
+    }
+
+    .shortcut-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 50px 15px 70px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    header > p {
+        font-size: 18px;
+    }
+
+    .shortcut-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 0;
+    }
+
+    .category-title {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+
+    .shortcut-card {
+        min-height: 110px;
+    }
 }
