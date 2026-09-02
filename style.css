@@ -65,3 +65,14 @@ p {
     transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(255, 0, 128, 0.35);
 }
+.letter {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.shortcut-card:nth-child(3n + 2) .letter {
+    background: linear-gradient(135deg, #ff0080, #7928ca);
+}
+
+.shortcut-card:nth-child(3n) .letter {
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+}
