@@ -2,153 +2,203 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="Windows Shortcut Keys A-Z - Master Windows and work faster with essential keyboard shortcuts."
-    >
-
-    <title>Windows Shortcut Keys A-Z</title>
-
+    <meta name="description" content="Windows Shortcut Keys A-Z - A professional reference for Windows keyboard shortcuts.">
+    <title>Windows Shortcut Keys A–Z</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         BACKGROUND EFFECTS
-    ========================== -->
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
 
-    <div class="background">
-        <div class="glow glow-1"></div>
-        <div class="glow glow-2"></div>
-        <div class="glow glow-3"></div>
+        <a href="#" class="brand">
+            <span class="windows-mark">
+                <span></span><span></span><span></span><span></span>
+            </span>
+            <span class="brand-text">
+                <strong>Windows</strong>
+                <small>Shortcut Reference</small>
+            </span>
+        </a>
+
+        <nav class="top-nav">
+            <a href="#shortcuts">Shortcuts</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="theme-button" id="themeToggle" aria-label="Toggle theme">
+            <span id="themeIcon">☾</span>
+        </button>
+
     </div>
+</header>
 
 
-    <!-- =========================
-         HEADER / HERO
-    ========================== -->
+<!-- PAGE LAYOUT -->
+<div class="page-layout">
 
-    <header class="hero">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
 
-        <div class="hero-badge">
-            ⚡ WINDOWS PRODUCTIVITY
+        <div class="sidebar-title">
+            <span>REFERENCE</span>
         </div>
 
-        <h1>
-            Windows Shortcut
-            <span>Keys A–Z</span>
-        </h1>
+        <a href="#shortcuts" class="side-link active">
+            <span>⌨</span>
+            All Shortcuts
+        </a>
 
-        <p class="hero-subtitle">
-            Master Windows. Work Faster. 🚀
-        </p>
+        <div class="sidebar-section">
+            <span>Categories</span>
+        </div>
 
-        <p class="hero-description">
-            Discover essential keyboard shortcuts that help you
-            navigate, control and work faster on Windows.
-        </p>
+        <a href="#ctrl" class="side-link">
+            <span>Ctrl</span>
+            Ctrl Shortcuts
+        </a>
+
+        <a href="#windows" class="side-link">
+            <span>⊞</span>
+            Windows Shortcuts
+        </a>
+
+        <a href="#alt" class="side-link">
+            <span>Alt</span>
+            Alt Shortcuts
+        </a>
+
+        <a href="#function" class="side-link">
+            <span>F</span>
+            Function Keys
+        </a>
+
+        <div class="sidebar-section">
+            <span>Quick Access</span>
+        </div>
+
+        <a href="#alphabet" class="side-link">
+            <span>A–Z</span>
+            Alphabetical Index
+        </a>
+
+    </aside>
 
 
-        <!-- Search -->
+    <!-- MAIN -->
+    <main class="main-content">
 
-        <div class="search-container">
-
-            <span class="search-icon">⌕</span>
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search a shortcut...  e.g. Copy, Paste, Screenshot"
-                autocomplete="off"
-            >
-
-            <button id="clearSearch" class="clear-search">
-                ×
-            </button>
-
+        <!-- BREADCRUMB -->
+        <div class="breadcrumb">
+            <span>Windows</span>
+            <span>/</span>
+            <strong>Shortcut Reference</strong>
         </div>
 
 
-        <!-- Statistics -->
+        <!-- HERO -->
+        <section class="hero">
 
-        <div class="stats">
-
-            <div class="stat">
-                <strong id="shortcutCount">36+</strong>
-                <span>Shortcuts</span>
+            <div class="hero-label">
+                WINDOWS PRODUCTIVITY
             </div>
 
-            <div class="stat-divider"></div>
+            <h1>Windows Shortcut Keys A–Z</h1>
+
+            <p class="hero-description">
+                A clear and practical reference for essential Windows keyboard shortcuts.
+                Find commands quickly and work more efficiently.
+            </p>
+
+            <!-- SEARCH -->
+            <div class="search-wrapper">
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search shortcuts..."
+                    autocomplete="off"
+                >
+
+                <kbd class="search-key">/</kbd>
+
+                <button id="clearSearch" class="clear-search" aria-label="Clear search">
+                    ×
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+        <section class="stats" id="shortcuts">
+
+            <div class="stat">
+                <strong id="shortcutCount">0</strong>
+                <span>Shortcuts</span>
+            </div>
 
             <div class="stat">
                 <strong>4</strong>
                 <span>Categories</span>
             </div>
 
-            <div class="stat-divider"></div>
+            <div class="stat">
+                <strong>26</strong>
+                <span>Letters</span>
+            </div>
 
             <div class="stat">
-                <strong>A–Z</strong>
-                <span>Coverage</span>
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <!-- =========================
-         MAIN
-    ========================== -->
-
-    <main class="main-container">
-
-
-        <!-- Category Filter -->
-
-        <section class="filter-section">
-
-            <div class="section-label">
-                EXPLORE SHORTCUTS
-            </div>
-
-            <div class="filters">
-
-                <button class="filter active" data-filter="all">
-                    ✦ All
-                </button>
-
-                <button class="filter" data-filter="ctrl">
-                    Ctrl
-                </button>
-
-                <button class="filter" data-filter="windows">
-                    🪟 Windows
-                </button>
-
-                <button class="filter" data-filter="alt">
-                    Alt
-                </button>
-
-                <button class="filter" data-filter="function">
-                    F-Keys
-                </button>
-
+                <strong>Windows</strong>
+                <span>Platform</span>
             </div>
 
         </section>
 
 
-        <!-- A-Z Navigation -->
+        <!-- FILTER -->
+        <section class="toolbar">
 
-        <section class="alphabet-section">
+            <div>
+                <span class="toolbar-label">FILTER BY</span>
 
-            <div class="section-label">
-                JUMP TO LETTER
+                <div class="filters">
+                    <button class="filter active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter" data-filter="ctrl">
+                        Ctrl
+                    </button>
+
+                    <button class="filter" data-filter="windows">
+                        Windows
+                    </button>
+
+                    <button class="filter" data-filter="alt">
+                        Alt
+                    </button>
+
+                    <button class="filter" data-filter="function">
+                        F-Keys
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ALPHABET -->
+        <section class="alphabet-section" id="alphabet">
+
+            <div class="section-heading">
+                <span class="section-kicker">INDEX</span>
+                <h2>Jump to a letter</h2>
             </div>
 
             <div class="alphabet">
@@ -185,1403 +235,883 @@
         </section>
 
 
-        <!-- =========================
-             SHORTCUT GRID
-        ========================== -->
-
-        <div class="shortcut-grid" id="shortcutGrid">
+        <!-- CATEGORIES -->
+        <section class="shortcut-area" id="categories">
 
 
-            <!-- =========================
-                 CTRL SHORTCUTS
-            ========================== -->
+            <!-- CTRL -->
+            <section class="shortcut-category" id="ctrl" data-category="ctrl">
 
-            <section
-                class="shortcut-category"
-                data-category="ctrl"
-            >
+                <div class="category-header">
 
-                <div class="category-heading">
-
-                    <div class="category-icon">
-                        CTRL
+                    <div class="category-icon ctrl-icon">
+                        Ctrl
                     </div>
 
                     <div>
+                        <span class="section-kicker">CATEGORY 01</span>
                         <h2>Ctrl Shortcuts</h2>
-                        <p>Everyday commands for faster work</p>
+                        <p>Common commands for everyday work.</p>
                     </div>
 
                 </div>
 
 
-                <div class="cards">
-
+                <div class="shortcut-grid">
 
                     <article class="shortcut-card" data-letter="A">
-
-                        <div class="letter">A</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">A</span>
                             <div class="keys">
-                                <kbd>Ctrl</kbd>
-                                <span>+</span>
-                                <kbd>A</kbd>
+                                <kbd>Ctrl</kbd><span>+</span><kbd>A</kbd>
                             </div>
-
-                            <h3>Select All</h3>
-
-                            <p>
-                                Selects all text, files or items in the current window.
-                            </p>
-
                         </div>
-
+                        <h3>Select All</h3>
+                        <p>Selects all text, files or items in the current window.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="C">
-
-                        <div class="letter">C</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">C</span>
                             <div class="keys">
-                                <kbd>Ctrl</kbd>
-                                <span>+</span>
-                                <kbd>C</kbd>
+                                <kbd>Ctrl</kbd><span>+</span><kbd>C</kbd>
                             </div>
-
-                            <h3>Copy</h3>
-
-                            <p>
-                                Copies the selected text, file or item.
-                            </p>
-
                         </div>
-
+                        <h3>Copy</h3>
+                        <p>Copies the selected text, file or item.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="D">
-
-                        <div class="letter">D</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">D</span>
                             <div class="keys">
-                                <kbd>Ctrl</kbd>
-                                <span>+</span>
-                                <kbd>D</kbd>
+                                <kbd>Ctrl</kbd><span>+</span><kbd>D</kbd>
                             </div>
-
-                            <h3>Bookmark / Duplicate</h3>
-
-                            <p>
-                                Performs different actions depending on the application.
-                            </p>
-
                         </div>
-
+                        <h3>Bookmark / Duplicate</h3>
+                        <p>Performs different actions depending on the application.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="F">
-
-                        <div class="letter">F</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">F</span>
                             <div class="keys">
-                                <kbd>Ctrl</kbd>
-                                <span>+</span>
-                                <kbd>F</kbd>
+                                <kbd>Ctrl</kbd><span>+</span><kbd>F</kbd>
                             </div>
-
-                            <h3>Find</h3>
-
-                            <p>
-                                Searches for text or content in the current application.
-                            </p>
-
                         </div>
-
+                        <h3>Find</h3>
+                        <p>Searches for text or content in the current application.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="J">
-
-                        <div class="letter">J</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">J</span>
                             <div class="keys">
-                                <kbd>Ctrl</kbd>
-                                <span>+</span>
-                                <kbd>J</kbd>
+                                <kbd>Ctrl</kbd><span>+</span><kbd>J</kbd>
                             </div>
-
-                            <h3>Downloads</h3>
-
-                            <p>
-                                Opens downloads in supported browsers and applications.
-                            </p>
-
                         </div>
-
+                        <h3>Downloads</h3>
+                        <p>Opens downloads in supported browsers and applications.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="K">
-
-                        <div class="letter">K</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">K</span>
                             <div class="keys">
-                                <kbd>Ctrl</kbd>
-                                <span>+</span>
-                                <kbd>K</kbd>
+                                <kbd>Ctrl</kbd><span>+</span><kbd>K</kbd>
                             </div>
-
-                            <h3>Insert Link</h3>
-
-                            <p>
-                                Opens the link insertion option in supported apps.
-                            </p>
-
                         </div>
-
+                        <h3>Insert Link</h3>
+                        <p>Opens the link insertion option in supported applications.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="V">
-
-                        <div class="letter">V</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">V</span>
                             <div class="keys">
-                                <kbd>Ctrl</kbd>
-                                <span>+</span>
-                                <kbd>V</kbd>
+                                <kbd>Ctrl</kbd><span>+</span><kbd>V</kbd>
                             </div>
-
-                            <h3>Paste</h3>
-
-                            <p>
-                                Pastes copied or cut content.
-                            </p>
-
                         </div>
-
+                        <h3>Paste</h3>
+                        <p>Pastes copied or cut content.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="X">
-
-                        <div class="letter">X</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">X</span>
                             <div class="keys">
-                                <kbd>Ctrl</kbd>
-                                <span>+</span>
-                                <kbd>X</kbd>
+                                <kbd>Ctrl</kbd><span>+</span><kbd>X</kbd>
                             </div>
-
-                            <h3>Cut</h3>
-
-                            <p>
-                                Removes the selected item and copies it to the clipboard.
-                            </p>
-
                         </div>
-
+                        <h3>Cut</h3>
+                        <p>Removes the selected item and copies it to the clipboard.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="Y">
-
-                        <div class="letter">Y</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">Y</span>
                             <div class="keys">
-                                <kbd>Ctrl</kbd>
-                                <span>+</span>
-                                <kbd>Y</kbd>
+                                <kbd>Ctrl</kbd><span>+</span><kbd>Y</kbd>
                             </div>
-
-                            <h3>Redo</h3>
-
-                            <p>
-                                Repeats the last undone action.
-                            </p>
-
                         </div>
-
+                        <h3>Redo</h3>
+                        <p>Repeats the last undone action.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="Z">
-
-                        <div class="letter">Z</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">Z</span>
                             <div class="keys">
-                                <kbd>Ctrl</kbd>
-                                <span>+</span>
-                                <kbd>Z</kbd>
+                                <kbd>Ctrl</kbd><span>+</span><kbd>Z</kbd>
                             </div>
-
-                            <h3>Undo</h3>
-
-                            <p>
-                                Reverses the last action.
-                            </p>
-
                         </div>
-
+                        <h3>Undo</h3>
+                        <p>Reverses the last action.</p>
                     </article>
 
                 </div>
-
             </section>
 
 
-            <!-- =========================
-                 WINDOWS SHORTCUTS
-            ========================== -->
+            <!-- WINDOWS -->
+            <section class="shortcut-category" id="windows" data-category="windows">
 
-            <section
-                class="shortcut-category"
-                data-category="windows"
-            >
-
-                <div class="category-heading">
+                <div class="category-header">
 
                     <div class="category-icon windows-icon">
                         ⊞
                     </div>
 
                     <div>
+                        <span class="section-kicker">CATEGORY 02</span>
                         <h2>Windows Shortcuts</h2>
-                        <p>Powerful Windows system commands</p>
+                        <p>System commands for navigating Windows.</p>
                     </div>
 
                 </div>
 
 
-                <div class="cards">
-
+                <div class="shortcut-grid">
 
                     <article class="shortcut-card" data-letter="B">
-
-                        <div class="letter">B</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">B</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>B</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>B</kbd>
                             </div>
-
-                            <h3>Focus Notification Area</h3>
-
-                            <p>
-                                Moves focus to the notification area of the taskbar.
-                            </p>
-
                         </div>
-
+                        <h3>Focus Notification Area</h3>
+                        <p>Moves focus to the notification area of the taskbar.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="E">
-
-                        <div class="letter">E</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">E</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>E</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>E</kbd>
                             </div>
-
-                            <h3>File Explorer</h3>
-
-                            <p>
-                                Opens Windows File Explorer instantly.
-                            </p>
-
                         </div>
-
+                        <h3>File Explorer</h3>
+                        <p>Opens Windows File Explorer.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="G">
-
-                        <div class="letter">G</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">G</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>G</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>G</kbd>
                             </div>
-
-                            <h3>Game Bar</h3>
-
-                            <p>
-                                Opens the Xbox Game Bar.
-                            </p>
-
                         </div>
-
+                        <h3>Game Bar</h3>
+                        <p>Opens Xbox Game Bar.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="H">
-
-                        <div class="letter">H</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">H</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>H</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>H</kbd>
                             </div>
-
-                            <h3>Voice Typing</h3>
-
-                            <p>
-                                Opens Windows voice typing.
-                            </p>
-
                         </div>
-
+                        <h3>Voice Typing</h3>
+                        <p>Opens Windows voice typing.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="I">
-
-                        <div class="letter">I</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">I</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>I</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>I</kbd>
                             </div>
-
-                            <h3>Settings</h3>
-
-                            <p>
-                                Opens Windows Settings.
-                            </p>
-
                         </div>
-
+                        <h3>Settings</h3>
+                        <p>Opens Windows Settings.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="L">
-
-                        <div class="letter">L</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">L</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>L</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>L</kbd>
                             </div>
-
-                            <h3>Lock PC</h3>
-
-                            <p>
-                                Quickly locks your Windows computer.
-                            </p>
-
                         </div>
-
+                        <h3>Lock PC</h3>
+                        <p>Quickly locks your Windows computer.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="M">
-
-                        <div class="letter">M</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">M</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>M</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>M</kbd>
                             </div>
-
-                            <h3>Minimize Windows</h3>
-
-                            <p>
-                                Minimizes all open windows.
-                            </p>
-
                         </div>
-
+                        <h3>Minimize Windows</h3>
+                        <p>Minimizes all open windows.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="N">
-
-                        <div class="letter">N</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">N</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>N</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>N</kbd>
                             </div>
-
-                            <h3>Notification Center</h3>
-
-                            <p>
-                                Opens notifications and quick settings.
-                            </p>
-
                         </div>
-
+                        <h3>Notification Center</h3>
+                        <p>Opens notifications and quick settings.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="O">
-
-                        <div class="letter">O</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">O</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>O</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>O</kbd>
                             </div>
-
-                            <h3>Device Orientation</h3>
-
-                            <p>
-                                Locks device orientation on supported devices.
-                            </p>
-
                         </div>
-
+                        <h3>Device Orientation</h3>
+                        <p>Locks device orientation on supported devices.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="P">
-
-                        <div class="letter">P</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">P</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>P</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>P</kbd>
                             </div>
-
-                            <h3>Project</h3>
-
-                            <p>
-                                Opens display projection options.
-                            </p>
-
                         </div>
-
+                        <h3>Project</h3>
+                        <p>Opens display projection options.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="Q">
-
-                        <div class="letter">Q</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">Q</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>Q</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>Q</kbd>
                             </div>
-
-                            <h3>Search</h3>
-
-                            <p>
-                                Opens Windows search on supported versions.
-                            </p>
-
                         </div>
-
+                        <h3>Search</h3>
+                        <p>Opens Windows search on supported versions.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="R">
-
-                        <div class="letter">R</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">R</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>R</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>R</kbd>
                             </div>
-
-                            <h3>Run</h3>
-
-                            <p>
-                                Opens the Run dialog box.
-                            </p>
-
                         </div>
-
+                        <h3>Run</h3>
+                        <p>Opens the Run dialog box.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="S">
-
-                        <div class="letter">S</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">S</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>S</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>S</kbd>
                             </div>
-
-                            <h3>Windows Search</h3>
-
-                            <p>
-                                Opens Windows Search.
-                            </p>
-
                         </div>
-
+                        <h3>Windows Search</h3>
+                        <p>Opens Windows Search.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="T">
-
-                        <div class="letter">T</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">T</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>T</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>T</kbd>
                             </div>
-
-                            <h3>Taskbar Navigation</h3>
-
-                            <p>
-                                Cycles through apps on the taskbar.
-                            </p>
-
                         </div>
-
+                        <h3>Taskbar Navigation</h3>
+                        <p>Cycles through apps on the taskbar.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="U">
-
-                        <div class="letter">U</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">U</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>U</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>U</kbd>
                             </div>
-
-                            <h3>Accessibility</h3>
-
-                            <p>
-                                Opens Accessibility settings.
-                            </p>
-
                         </div>
-
+                        <h3>Accessibility</h3>
+                        <p>Opens Accessibility settings.</p>
                     </article>
 
 
                     <article class="shortcut-card" data-letter="W">
-
-                        <div class="letter">W</div>
-
-                        <div class="shortcut-info">
-
+                        <div class="card-top">
+                            <span class="letter">W</span>
                             <div class="keys">
-                                <kbd>Win</kbd>
-                                <span>+</span>
-                                <kbd>W</kbd>
+                                <kbd>Win</kbd><span>+</span><kbd>W</kbd>
                             </div>
-
-                            <h3>Widgets</h3>
-
-                            <p>
-                                Opens Windows Widgets.
-                            </p>
-
                         </div>
-
+                        <h3>Widgets</h3>
+                        <p>Opens Windows Widgets.</p>
                     </article>
 
                 </div>
-
             </section>
 
 
-            <!-- =========================
-                 ALT SHORTCUTS
-            ========================== -->
+            <!-- ALT -->
+            <section class="shortcut-category" id="alt" data-category="alt">
 
-            <section
-                class="shortcut-category"
-                data-category="alt"
-            >
-
-                <div class="category-heading">
+                <div class="category-header">
 
                     <div class="category-icon alt-icon">
-                        ALT
+                        Alt
                     </div>
 
                     <div>
+                        <span class="section-kicker">CATEGORY 03</span>
                         <h2>Alt Shortcuts</h2>
-                        <p>Switch, close and control windows</p>
+                        <p>Switch, close and control windows.</p>
                     </div>
 
                 </div>
 
 
-                <div class="cards">
+                <div class="shortcut-grid">
 
-
-                    <article class="shortcut-card special-card">
-
-                        <div class="letter">↔</div>
-
-                        <div class="shortcut-info">
-
+                    <article class="shortcut-card" data-letter="T">
+                        <div class="card-top">
+                            <span class="letter">Tab</span>
                             <div class="keys">
-                                <kbd>Alt</kbd>
-                                <span>+</span>
-                                <kbd>Tab</kbd>
+                                <kbd>Alt</kbd><span>+</span><kbd>Tab</kbd>
                             </div>
-
-                            <h3>Switch Apps</h3>
-
-                            <p>
-                                Quickly switches between open applications.
-                            </p>
-
                         </div>
-
+                        <h3>Switch Apps</h3>
+                        <p>Quickly switches between open applications.</p>
                     </article>
 
 
-                    <article class="shortcut-card special-card">
-
-                        <div class="letter">×</div>
-
-                        <div class="shortcut-info">
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F4</span>
                             <div class="keys">
-                                <kbd>Alt</kbd>
-                                <span>+</span>
-                                <kbd>F4</kbd>
+                                <kbd>Alt</kbd><span>+</span><kbd>F4</kbd>
                             </div>
-
-                            <h3>Close Window</h3>
-
-                            <p>
-                                Closes the active application or window.
-                            </p>
-
                         </div>
-
+                        <h3>Close Window</h3>
+                        <p>Closes the active application or window.</p>
                     </article>
 
 
-                    <article class="shortcut-card special-card">
-
-                        <div class="letter">↗</div>
-
-                        <div class="shortcut-info">
-
+                    <article class="shortcut-card" data-letter="E">
+                        <div class="card-top">
+                            <span class="letter">Enter</span>
                             <div class="keys">
-                                <kbd>Alt</kbd>
-                                <span>+</span>
-                                <kbd>Enter</kbd>
+                                <kbd>Alt</kbd><span>+</span><kbd>Enter</kbd>
                             </div>
-
-                            <h3>Properties</h3>
-
-                            <p>
-                                Opens properties for a selected item.
-                            </p>
-
                         </div>
-
+                        <h3>Properties</h3>
+                        <p>Opens properties for a selected item.</p>
                     </article>
 
 
-                    <article class="shortcut-card special-card">
-
-                        <div class="letter">☰</div>
-
-                        <div class="shortcut-info">
-
+                    <article class="shortcut-card" data-letter="S">
+                        <div class="card-top">
+                            <span class="letter">Space</span>
                             <div class="keys">
-                                <kbd>Alt</kbd>
-                                <span>+</span>
-                                <kbd>Space</kbd>
+                                <kbd>Alt</kbd><span>+</span><kbd>Space</kbd>
                             </div>
-
-                            <h3>Window Menu</h3>
-
-                            <p>
-                                Opens the active window's system menu.
-                            </p>
-
                         </div>
-
+                        <h3>Window Menu</h3>
+                        <p>Opens the active window's system menu.</p>
                     </article>
 
 
-                    <article class="shortcut-card special-card">
-
-                        <div class="letter">⇄</div>
-
-                        <div class="shortcut-info">
-
+                    <article class="shortcut-card" data-letter="E">
+                        <div class="card-top">
+                            <span class="letter">Esc</span>
                             <div class="keys">
-                                <kbd>Alt</kbd>
-                                <span>+</span>
-                                <kbd>Esc</kbd>
+                                <kbd>Alt</kbd><span>+</span><kbd>Esc</kbd>
                             </div>
-
-                            <h3>Cycle Windows</h3>
-
-                            <p>
-                                Cycles through open windows.
-                            </p>
-
                         </div>
-
+                        <h3>Cycle Windows</h3>
+                        <p>Cycles through open windows.</p>
                     </article>
 
                 </div>
-
             </section>
 
 
-            <!-- =========================
-                 FUNCTION KEYS
-            ========================== -->
+            <!-- FUNCTION -->
+            <section class="shortcut-category" id="function" data-category="function">
 
-            <section
-                class="shortcut-category"
-                data-category="function"
-            >
-
-                <div class="category-heading">
+                <div class="category-header">
 
                     <div class="category-icon function-icon">
                         F
                     </div>
 
                     <div>
+                        <span class="section-kicker">CATEGORY 04</span>
                         <h2>Function Keys</h2>
-                        <p>Quick-access commands from F1 to F12</p>
+                        <p>Quick-access commands from F1 to F12.</p>
                     </div>
 
                 </div>
 
 
-                <div class="cards function-cards">
+                <div class="shortcut-grid">
 
-
-                    <article class="shortcut-card">
-
-                        <div class="letter">F1</div>
-
-                        <div class="shortcut-info">
-
-                            <div class="keys">
-                                <kbd>F1</kbd>
-                            </div>
-
-                            <h3>Help</h3>
-
-                            <p>
-                                Opens help for the active application.
-                            </p>
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F1</span>
+                            <div class="keys"><kbd>F1</kbd></div>
                         </div>
-
+                        <h3>Help</h3>
+                        <p>Opens help for the active application.</p>
                     </article>
 
 
-                    <article class="shortcut-card">
-
-                        <div class="letter">F2</div>
-
-                        <div class="shortcut-info">
-
-                            <div class="keys">
-                                <kbd>F2</kbd>
-                            </div>
-
-                            <h3>Rename</h3>
-
-                            <p>
-                                Renames a selected file or folder.
-                            </p>
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F2</span>
+                            <div class="keys"><kbd>F2</kbd></div>
                         </div>
-
+                        <h3>Rename</h3>
+                        <p>Renames a selected file or folder.</p>
                     </article>
 
 
-                    <article class="shortcut-card">
-
-                        <div class="letter">F3</div>
-
-                        <div class="shortcut-info">
-
-                            <div class="keys">
-                                <kbd>F3</kbd>
-                            </div>
-
-                            <h3>Search</h3>
-
-                            <p>
-                                Searches for files or content in supported apps.
-                            </p>
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F3</span>
+                            <div class="keys"><kbd>F3</kbd></div>
                         </div>
-
+                        <h3>Search</h3>
+                        <p>Searches for files or content in supported apps.</p>
                     </article>
 
 
-                    <article class="shortcut-card">
-
-                        <div class="letter">F4</div>
-
-                        <div class="shortcut-info">
-
-                            <div class="keys">
-                                <kbd>F4</kbd>
-                            </div>
-
-                            <h3>Address Bar</h3>
-
-                            <p>
-                                Focuses the address bar in File Explorer and browsers.
-                            </p>
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F4</span>
+                            <div class="keys"><kbd>F4</kbd></div>
                         </div>
-
+                        <h3>Address Bar</h3>
+                        <p>Focuses the address bar in File Explorer and browsers.</p>
                     </article>
 
 
-                    <article class="shortcut-card">
-
-                        <div class="letter">F5</div>
-
-                        <div class="shortcut-info">
-
-                            <div class="keys">
-                                <kbd>F5</kbd>
-                            </div>
-
-                            <h3>Refresh</h3>
-
-                            <p>
-                                Refreshes the current page or window.
-                            </p>
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F5</span>
+                            <div class="keys"><kbd>F5</kbd></div>
                         </div>
-
+                        <h3>Refresh</h3>
+                        <p>Refreshes the current page or window.</p>
                     </article>
 
 
-                    <article class="shortcut-card">
-
-                        <div class="letter">F6</div>
-
-                        <div class="shortcut-info">
-
-                            <div class="keys">
-                                <kbd>F6</kbd>
-                            </div>
-
-                            <h3>Cycle Elements</h3>
-
-                            <p>
-                                Moves focus through elements of a window.
-                            </p>
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F6</span>
+                            <div class="keys"><kbd>F6</kbd></div>
                         </div>
-
+                        <h3>Cycle Elements</h3>
+                        <p>Moves focus through elements of a window.</p>
                     </article>
 
 
-                    <article class="shortcut-card">
-
-                        <div class="letter">F7</div>
-
-                        <div class="shortcut-info">
-
-                            <div class="keys">
-                                <kbd>F7</kbd>
-                            </div>
-
-                            <h3>Browsing History</h3>
-
-                            <p>
-                                Provides caret browsing in supported browsers.
-                            </p>
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F7</span>
+                            <div class="keys"><kbd>F7</kbd></div>
                         </div>
-
+                        <h3>Browsing History</h3>
+                        <p>Provides caret browsing in supported browsers.</p>
                     </article>
 
 
-                    <article class="shortcut-card">
-
-                        <div class="letter">F8</div>
-
-                        <div class="shortcut-info">
-
-                            <div class="keys">
-                                <kbd>F8</kbd>
-                            </div>
-
-                            <h3>Startup Options</h3>
-
-                            <p>
-                                Can access startup options during boot on some systems.
-                            </p>
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F8</span>
+                            <div class="keys"><kbd>F8</kbd></div>
                         </div>
-
+                        <h3>Startup Options</h3>
+                        <p>Can access startup options during boot on some systems.</p>
                     </article>
 
 
-                    <article class="shortcut-card">
-
-                        <div class="letter">F9</div>
-
-                        <div class="shortcut-info">
-
-                            <div class="keys">
-                                <kbd>F9</kbd>
-                            </div>
-
-                            <h3>Refresh Data</h3>
-
-                            <p>
-                                Performs application-specific refresh actions.
-                            </p>
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F9</span>
+                            <div class="keys"><kbd>F9</kbd></div>
                         </div>
-
+                        <h3>Refresh Data</h3>
+                        <p>Performs application-specific refresh actions.</p>
                     </article>
 
 
-                    <article class="shortcut-card">
-
-                        <div class="letter">F10</div>
-
-                        <div class="shortcut-info">
-
-                            <div class="keys">
-                                <kbd>F10</kbd>
-                            </div>
-
-                            <h3>Menu Bar</h3>
-
-                            <p>
-                                Activates the menu bar in many applications.
-                            </p>
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F10</span>
+                            <div class="keys"><kbd>F10</kbd></div>
                         </div>
-
+                        <h3>Menu Bar</h3>
+                        <p>Activates the menu bar in many applications.</p>
                     </article>
 
 
-                    <article class="shortcut-card">
-
-                        <div class="letter">F11</div>
-
-                        <div class="shortcut-info">
-
-                            <div class="keys">
-                                <kbd>F11</kbd>
-                            </div>
-
-                            <h3>Full Screen</h3>
-
-                            <p>
-                                Toggles full-screen mode in many applications.
-                            </p>
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F11</span>
+                            <div class="keys"><kbd>F11</kbd></div>
                         </div>
-
+                        <h3>Full Screen</h3>
+                        <p>Toggles full-screen mode in many applications.</p>
                     </article>
 
 
-                    <article class="shortcut-card">
-
-                        <div class="letter">F12</div>
-
-                        <div class="shortcut-info">
-
-                            <div class="keys">
-                                <kbd>F12</kbd>
-                            </div>
-
-                            <h3>Developer Tools</h3>
-
-                            <p>
-                                Opens developer tools in many web browsers.
-                            </p>
-
+                    <article class="shortcut-card" data-letter="F">
+                        <div class="card-top">
+                            <span class="letter">F12</span>
+                            <div class="keys"><kbd>F12</kbd></div>
                         </div>
-
+                        <h3>Developer Tools</h3>
+                        <p>Opens developer tools in many web browsers.</p>
                     </article>
 
                 </div>
-
             </section>
 
+        </section>
 
-            <!-- No results -->
 
-            <div id="noResults" class="no-results">
+        <!-- NO RESULTS -->
+        <section class="no-results" id="noResults">
 
-                <div class="no-results-icon">⌕</div>
+            <div class="no-results-icon">⌕</div>
 
-                <h2>No shortcuts found</h2>
+            <h2>No shortcuts found</h2>
 
-                <p>
-                    Try another shortcut, key or category.
-                </p>
+            <p>
+                Try another shortcut, key or category.
+            </p>
 
-            </div>
+            <button id="resetSearch">
+                Clear search
+            </button>
 
-        </div>
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about-section" id="about">
+
+            <span class="section-kicker">ABOUT THIS REFERENCE</span>
+
+            <h2>Work smarter with keyboard shortcuts.</h2>
+
+            <p>
+                This reference brings commonly used Windows keyboard shortcuts
+                together in one organized, searchable interface.
+            </p>
+
+        </section>
 
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <div class="footer-logo">
-            <span>⚡</span>
-            Windows Shortcuts
-        </div>
-
-        <p>
-            Work smarter. Type faster. Do more.
-        </p>
-
-        <div class="footer-line"></div>
-
-        <small>
-            Windows Shortcut Keys A–Z • Built for productivity
-        </small>
-
-    </footer>
+</div>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
+<!-- FOOTER -->
+<footer class="site-footer">
 
-    <script>
+    <div>
+        <strong>Windows Shortcut Reference</strong>
+        <span>Independent reference for Windows productivity.</span>
+    </div>
 
-        const searchInput = document.getElementById("searchInput");
-        const clearSearch = document.getElementById("clearSearch");
+    <div>
+        Windows Shortcut Keys A–Z
+    </div>
 
-        const filterButtons =
-            document.querySelectorAll(".filter");
-
-        const categories =
-            document.querySelectorAll(".shortcut-category");
-
-        const cards =
-            document.querySelectorAll(".shortcut-card");
-
-        const alphabetButtons =
-            document.querySelectorAll(".alphabet button");
-
-        const noResults =
-            document.getElementById("noResults");
+</footer>
 
 
-        /* =========================
-           SEARCH
-        ========================== */
+<script>
 
-        function performSearch() {
+const searchInput = document.getElementById("searchInput");
+const clearSearch = document.getElementById("clearSearch");
+const resetSearch = document.getElementById("resetSearch");
+const noResults = document.getElementById("noResults");
+const cards = document.querySelectorAll(".shortcut-card");
+const categories = document.querySelectorAll(".shortcut-category");
+const filters = document.querySelectorAll(".filter");
+const alphabetButtons = document.querySelectorAll(".alphabet button");
+const shortcutCount = document.getElementById("shortcutCount");
 
-            const searchValue =
-                searchInput.value.toLowerCase().trim();
-
-            let visibleCards = 0;
-
-            cards.forEach(card => {
-
-                const text =
-                    card.innerText.toLowerCase();
-
-                const matches =
-                    text.includes(searchValue);
-
-                if (matches) {
-
-                    card.style.display = "";
-
-                    visibleCards++;
-
-                } else {
-
-                    card.style.display = "none";
-
-                }
-
-            });
+let currentFilter = "all";
 
 
-            categories.forEach(category => {
+/* COUNT SHORTCUTS */
 
-                const visible =
-                    [...category.querySelectorAll(".shortcut-card")]
-                    .some(card =>
-                        card.style.display !== "none"
-                    );
-
-                category.style.display =
-                    visible ? "" : "none";
-
-            });
+shortcutCount.textContent = cards.length;
 
 
-            noResults.classList.toggle(
-                "show",
-                visibleCards === 0
-            );
+/* SEARCH */
 
+function applyFilters() {
 
-            clearSearch.classList.toggle(
-                "show",
-                searchValue.length > 0
-            );
+    const query = searchInput.value.toLowerCase().trim();
+    let visibleCards = 0;
 
-        }
+    categories.forEach(category => {
 
+        const categoryType = category.dataset.category;
+        const categoryCards = category.querySelectorAll(".shortcut-card");
 
-        searchInput.addEventListener(
-            "input",
-            performSearch
-        );
+        let categoryVisible = 0;
 
+        categoryCards.forEach(card => {
 
-        /* =========================
-           CLEAR SEARCH
-        ========================== */
+            const text = card.textContent.toLowerCase();
 
-        clearSearch.addEventListener(
-            "click",
-            () => {
+            const matchesSearch =
+                query === "" || text.includes(query);
 
-                searchInput.value = "";
+            const matchesFilter =
+                currentFilter === "all" ||
+                categoryType === currentFilter;
 
-                searchInput.focus();
+            if (matchesSearch && matchesFilter) {
 
-                resetFilters();
+                card.style.display = "";
+                categoryVisible++;
+                visibleCards++;
 
-                performSearch();
+            } else {
+
+                card.style.display = "none";
 
             }
-        );
-
-
-        /* =========================
-           CATEGORY FILTER
-        ========================== */
-
-        filterButtons.forEach(button => {
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    filterButtons.forEach(btn =>
-                        btn.classList.remove("active")
-                    );
-
-                    button.classList.add("active");
-
-                    const selected =
-                        button.dataset.filter;
-
-                    cards.forEach(card =>
-                        card.style.display = ""
-                    );
-
-                    categories.forEach(category => {
-
-                        if (
-                            selected === "all" ||
-                            category.dataset.category === selected
-                        ) {
-
-                            category.style.display = "";
-
-                        } else {
-
-                            category.style.display = "none";
-
-                        }
-
-                    });
-
-                    noResults.classList.remove("show");
-
-                }
-            );
 
         });
 
+        category.style.display =
+            categoryVisible > 0 ? "" : "none";
 
-        /* =========================
-           ALPHABET NAVIGATION
-        ========================== */
+    });
 
-        alphabetButtons.forEach(button => {
+    noResults.classList.toggle(
+        "show",
+        visibleCards === 0
+    );
 
-            button.addEventListener(
-                "click",
-                () => {
+    clearSearch.classList.toggle(
+        "visible",
+        query.length > 0
+    );
+}
 
-                    const letter =
-                        button.dataset.letter;
 
-                    const target =
-                        document.querySelector(
-                            `.shortcut-card[data-letter="${letter}"]`
-                        );
+searchInput.addEventListener("input", applyFilters);
 
-                    if (target) {
 
-                        target.scrollIntoView({
-                            behavior: "smooth",
-                            block: "center"
-                        });
+/* CLEAR SEARCH */
 
-                        target.classList.add(
-                            "highlight-card"
-                        );
+function clearAll() {
 
-                        setTimeout(() => {
+    searchInput.value = "";
+    currentFilter = "all";
 
-                            target.classList.remove(
-                                "highlight-card"
-                            );
+    filters.forEach(button => {
+        button.classList.remove("active");
 
-                        }, 1500);
+        if (button.dataset.filter === "all") {
+            button.classList.add("active");
+        }
+    });
 
-                    }
+    applyFilters();
+    searchInput.focus();
+}
 
-                }
-            );
+clearSearch.addEventListener("click", clearAll);
+resetSearch.addEventListener("click", clearAll);
+
+
+/* CATEGORY FILTERS */
+
+filters.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        filters.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        currentFilter = button.dataset.filter;
+
+        applyFilters();
+
+        document
+            .getElementById("shortcuts")
+            .scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+    });
+
+});
+
+
+/* ALPHABET */
+
+alphabetButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const letter = button.dataset.letter;
+
+        let target = null;
+
+        cards.forEach(card => {
+
+            if (
+                !target &&
+                card.dataset.letter === letter
+            ) {
+                target = card;
+            }
 
         });
 
+        if (target) {
 
-        /* =========================
-           RESET FILTERS
-        ========================== */
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
 
-        function resetFilters() {
+            target.classList.add("highlight");
 
-            filterButtons.forEach(btn =>
-                btn.classList.remove("active")
-            );
-
-            document
-                .querySelector('[data-filter="all"]')
-                .classList.add("active");
-
-            categories.forEach(category =>
-                category.style.display = ""
-            );
-
-            cards.forEach(card =>
-                card.style.display = ""
-            );
+            setTimeout(() => {
+                target.classList.remove("highlight");
+            }, 1200);
 
         }
 
+    });
 
-        /* =========================
-           ESCAPE KEY
-        ========================== */
+});
 
-        document.addEventListener(
-            "keydown",
-            event => {
 
-                if (event.key === "/" &&
-                    document.activeElement !== searchInput) {
+/* KEYBOARD SHORTCUT FOR SEARCH */
 
-                    event.preventDefault();
+document.addEventListener("keydown", event => {
 
-                    searchInput.focus();
+    if (
+        event.key === "/" &&
+        document.activeElement !== searchInput
+    ) {
 
-                }
+        event.preventDefault();
+        searchInput.focus();
 
-                if (event.key === "Escape") {
+    }
 
-                    searchInput.value = "";
+    if (
+        event.key === "Escape" &&
+        document.activeElement === searchInput
+    ) {
 
-                    resetFilters();
+        clearAll();
 
-                    performSearch();
+    }
 
-                }
+});
 
-            }
-        );
 
-    </script>
+/* THEME */
+
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add("dark");
+    themeIcon.textContent = "☀";
+
+}
+
+
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark");
+
+    const dark =
+        document.body.classList.contains("dark");
+
+    localStorage.setItem(
+        "theme",
+        dark ? "dark" : "light"
+    );
+
+    themeIcon.textContent =
+        dark ? "☀" : "☾";
+
+});
+
+
+/* INITIAL */
+
+applyFilters();
+
+</script>
 
 </body>
 </html>
