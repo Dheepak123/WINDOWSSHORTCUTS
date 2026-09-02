@@ -57,3 +57,11 @@ p {
     margin: 8px 0 0;
     font-size: 17px;
 }
+.shortcut-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shortcut-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 0, 128, 0.35);
+}
