@@ -1,1 +1,21 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
+    color: white;
+    text-align: center;
+}
 
+header {
+    padding: 80px 20px;
+}
+
+h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 22px;
+    color: #cbd5e1;
+}
