@@ -19,3 +19,41 @@ p {
     font-size: 22px;
     color: #cbd5e1;
 }
+.shortcut-card {
+    width: 350px;
+    margin: 30px auto;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.letter {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ff0080, #7928ca);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.shortcut-info {
+    text-align: left;
+}
+
+.shortcut-info h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.shortcut-info p {
+    margin: 8px 0 0;
+    font-size: 17px;
+}
